@@ -10,5 +10,13 @@
   <%= @item.author %>
 </p>
 
+<p>
+  <strong>File:</strong>
+  <%= @item.media.url %>
+</p>
+<p>
+  <strong>Filesize:</strong>
+  <%= @item.media.size %>
+</p>
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
