@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Feed Settings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Link</th>
+      <th>Language</th>
+      <th>Copyright</th>
+      <th>Subtitle</th>
+      <th>Author</th>
+      <th>Summary</th>
+      <th>Description</th>
+      <th>Owner name</th>
+      <th>Owner mail</th>
+      <th>Image</th>
+      <th>Category</th>
+      <th>Keywords</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @feed_settings.each do |feed_setting| %>
+      <tr>
+        <td><%= feed_setting.title %></td>
+        <td><%= feed_setting.link %></td>
+        <td><%= feed_setting.language %></td>
+        <td><%= feed_setting.copyright %></td>
+        <td><%= feed_setting.subtitle %></td>
+        <td><%= feed_setting.author %></td>
+        <td><%= feed_setting.summary %></td>
+        <td><%= feed_setting.description %></td>
+        <td><%= feed_setting.owner_name %></td>
+        <td><%= feed_setting.owner_mail %></td>
+        <td><%= feed_setting.image %></td>
+        <td><%= feed_setting.category %></td>
+        <td><%= feed_setting.keywords %></td>
+        <td><%= link_to 'Show', feed_setting %></td>
+        <td><%= link_to 'Edit', edit_feed_setting_path(feed_setting) %></td>
+        <td><%= link_to 'Destroy', feed_setting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Feed setting', new_feed_setting_path %>

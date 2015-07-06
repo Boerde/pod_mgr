@@ -1,0 +1,69 @@
+<%= form_for(@feed_setting) do |f| %>
+  <% if @feed_setting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@feed_setting.errors.count, "error") %> prohibited this feed_setting from being saved:</h2>
+
+      <ul>
+      <% @feed_setting.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br>
+    <%= f.text_field :link %>
+  </div>
+  <div class="field">
+    <%= f.label :language %><br>
+    <%= f.text_field :language %>
+  </div>
+  <div class="field">
+    <%= f.label :copyright %><br>
+    <%= f.text_field :copyright %>
+  </div>
+  <div class="field">
+    <%= f.label :subtitle %><br>
+    <%= f.text_field :subtitle %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br>
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :summary %><br>
+    <%= f.text_field :summary %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :owner_name %><br>
+    <%= f.text_field :owner_name %>
+  </div>
+  <div class="field">
+    <%= f.label :owner_mail %><br>
+    <%= f.text_field :owner_mail %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.text_field :category %>
+  </div>
+  <div class="field">
+    <%= f.label :keywords %><br>
+    <%= f.text_field :keywords %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

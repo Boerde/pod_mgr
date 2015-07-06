@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @feed_setting.title %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @feed_setting.link %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @feed_setting.language %>
+</p>
+
+<p>
+  <strong>Copyright:</strong>
+  <%= @feed_setting.copyright %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <%= @feed_setting.subtitle %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @feed_setting.author %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @feed_setting.summary %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @feed_setting.description %>
+</p>
+
+<p>
+  <strong>Owner name:</strong>
+  <%= @feed_setting.owner_name %>
+</p>
+
+<p>
+  <strong>Owner mail:</strong>
+  <%= @feed_setting.owner_mail %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @feed_setting.image %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @feed_setting.category %>
+</p>
+
+<p>
+  <strong>Keywords:</strong>
+  <%= @feed_setting.keywords %>
+</p>
+
+<%= link_to 'Edit', edit_feed_setting_path(@feed_setting) %> |
+<%= link_to 'Back', feed_settings_path %>

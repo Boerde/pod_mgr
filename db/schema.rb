@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150614023731) do
+ActiveRecord::Schema.define(version: 20150706140345) do
+
+  create_table "feed_settings", force: :cascade do |t|
+    t.string   "title"
+    t.string   "link"
+    t.string   "language"
+    t.string   "copyright"
+    t.string   "subtitle"
+    t.string   "author"
+    t.string   "summary"
+    t.string   "description"
+    t.string   "owner_name"
+    t.string   "owner_mail"
+    t.string   "image"
+    t.string   "category"
+    t.string   "keywords"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "items", force: :cascade do |t|
     t.string   "title"
