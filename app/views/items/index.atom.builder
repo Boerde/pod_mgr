@@ -1,4 +1,4 @@
-atom_feed({'xmlns:itunes' => 'http://www.itunes.com/dtds/podcast-1.0.dtd'}) do |feed|
+atom_feed({'xmlns:content' => 'http://purl.org/rss/1.0/modules/content/', 'xmlns:dc' => 'http://purl.org/dc/elements/1.1/', 'xmlns:itunes' => 'http://www.itunes.com/dtds/podcast-1.0.dtd'}) do |feed|
 	srcFeed = FeedSetting.first
 	feed.title(srcFeed.title)
 	feed.link(srcFeed.link)
